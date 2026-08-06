@@ -60,11 +60,11 @@
           <option>Landscaping</option>
           <option>Window Cleaning</option>
           <option>Solar Panel Cleaning</option>
-          <option>Palm Tree Cleaning</option>
+          <option>Palm Tree Trimming</option>
           <option>Hedge Trimming</option>
           <option>Trashcan Cleaning</option>
           <option>Pressure Washing</option>
-          <option>Soft Washing</option>
+          <option>Weed Removal</option>
           <option>Multiple Services</option>
         </select>
         <button type="submit" class="btn btn-solid">Get My Free Estimate</button>
@@ -146,9 +146,9 @@
         </div>
       </a>
       <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1712932035236-78a0d36c2c65?w=600&q=80" alt="Palm Tree Cleaning" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1712932035236-78a0d36c2c65?w=600&q=80" alt="Palm Tree Trimming" loading="lazy" />
         <div class="svc-copy">
-          <h3>Palm Tree Cleaning</h3>
+          <h3>Palm Tree Trimming</h3>
           <p>Healthy, fire-safe, resort-ready palms year-round.</p>
         </div>
       </a>
@@ -174,10 +174,10 @@
         </div>
       </a>
       <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1760574152812-446463182358?w=600&q=80" alt="Soft Washing" loading="lazy" />
+        <img src="assets/weed-removal.jpg" alt="Weed Removal" loading="lazy" />
         <div class="svc-copy">
-          <h3>Soft Washing</h3>
-          <p>Stucco, roofs &amp; painted surfaces cleaned without damage.</p>
+          <h3>Weed Removal</h3>
+          <p>Invasive weeds cleared from rock, gravel &amp; desert landscapes.</p>
         </div>
       </a>
     </div>
@@ -202,7 +202,7 @@
     </div>
     <div class="gallery-grid" style="padding:0 40px;max-width:1320px;margin:0 auto;">
       <div class="gallery-item">
-        <img src="assets/landscaping-gallery.jpg" alt="Landscaping" loading="lazy" />
+        <img src="assets/landscaping-gallery.jpg" alt="Landscaping" loading="lazy" style="object-position:center 30%;" />
         <div class="label">Landscaping</div>
       </div>
       <div class="gallery-item">
@@ -280,11 +280,11 @@
   <section class="section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-img" style="position:relative;cursor:pointer;" onclick="var v=this.querySelector('video'),b=this.querySelector('.play-btn');if(v.paused){v.currentTime=0;v.muted=false;v.play();b.style.display='none';}else{v.pause();b.style.display='flex';}">
-          <video playsinline preload="metadata" onloadedmetadata="this.currentTime=8" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;border-radius:12px;">
-            <source src="assets/about-video.mp4#t=8" type="video/mp4" />
+        <div class="about-img" style="position:relative;cursor:pointer;" onclick="var v=this.querySelector('video'),b=this.querySelector('.play-btn');if(v.paused){v.muted=true;v.play().then(function(){v.muted=false;b.style.opacity='0';}).catch(function(e){console.error(e);});}else{v.pause();b.style.opacity='1';}">
+          <video playsinline preload="metadata" poster="assets/about-poster.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;border-radius:12px;">
+            <source src="assets/about-video.mp4" type="video/mp4" />
           </video>
-          <div class="play-btn" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);border-radius:12px;">
+          <div class="play-btn" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);border-radius:12px;transition:opacity .3s;">
             <svg width="72" height="72" viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="35" stroke="#fff" stroke-width="2"/><polygon points="28,20 28,52 54,36" fill="#fff"/></svg>
           </div>
         </div>
@@ -362,11 +362,11 @@
             <option>Landscaping</option>
             <option>Window Cleaning</option>
             <option>Solar Panel Cleaning</option>
-            <option>Palm Tree Cleaning</option>
+            <option>Palm Tree Trimming</option>
             <option>Hedge Trimming</option>
             <option>Trashcan Cleaning</option>
             <option>Pressure Washing</option>
-            <option>Soft Washing</option>
+            <option>Weed Removal</option>
             <option>Multiple Services</option>
           </select>
           <textarea rows="3" placeholder="Anything else we should know? (optional)"></textarea>
@@ -390,7 +390,7 @@
           <li><a href="#services">Landscaping</a></li>
           <li><a href="#services">Window Cleaning</a></li>
           <li><a href="#services">Solar Panel Cleaning</a></li>
-          <li><a href="#services">Palm Tree Cleaning</a></li>
+          <li><a href="#services">Palm Tree Trimming</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -399,7 +399,7 @@
           <li><a href="#services">Hedge Trimming</a></li>
           <li><a href="#services">Trashcan Cleaning</a></li>
           <li><a href="#services">Pressure Washing</a></li>
-          <li><a href="#services">Soft Washing</a></li>
+          <li><a href="#services">Weed Removal</a></li>
         </ul>
       </div>
       <div class="footer-col">
