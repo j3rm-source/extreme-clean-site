@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs><radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#ff1a1a"/><stop offset=".55" stop-color="#c40000"/><stop offset="1" stop-color="#4a0000"/></radialGradient>
+<linearGradient id="wh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="900"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#9a9a9a"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g stroke-linecap="butt">
+<line x1="-60" y1="943" x2="1660" y2="616" stroke="#0a0a0a" stroke-width="16"/>
+<line x1="531" y1="-60" x2="1619" y2="-60" stroke="url(#wh)" stroke-width="14"/>
+<line x1="-28" y1="-60" x2="1660" y2="-23" stroke="#0a0a0a" stroke-width="16"/>
+<line x1="881" y1="960" x2="-60" y2="516" stroke="url(#wh)" stroke-width="14"/>
+<line x1="963" y1="-60" x2="545" y2="960" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="929" y1="-60" x2="793" y2="960" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="36" y1="-60" x2="1660" y2="81" stroke="url(#wh)" stroke-width="18"/>
+<line x1="1667" y1="960" x2="1660" y2="-57" stroke="#0a0a0a" stroke-width="16"/>
+<line x1="1660" y1="667" x2="-79" y2="-60" stroke="url(#wh)" stroke-width="18"/>
+<line x1="-60" y1="-75" x2="1660" y2="291" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="787" y1="-60" x2="1336" y2="960" stroke="#0a0a0a" stroke-width="22"/>
+<line x1="596" y1="960" x2="1660" y2="-11" stroke="url(#wh)" stroke-width="24"/>
+<line x1="1660" y1="954" x2="-34" y2="960" stroke="#0a0a0a" stroke-width="22"/>
+<line x1="1117" y1="960" x2="770" y2="-60" stroke="url(#wh)" stroke-width="14"/>
+<line x1="-60" y1="210" x2="638" y2="960" stroke="#0a0a0a" stroke-width="30"/>
+<line x1="-60" y1="948" x2="713" y2="-60" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="1660" y1="79" x2="-60" y2="561" stroke="url(#wh)" stroke-width="10"/>
+<line x1="-59" y1="-60" x2="1028" y2="960" stroke="#0a0a0a" stroke-width="22"/>
+<line x1="-60" y1="-6" x2="1299" y2="-60" stroke="url(#wh)" stroke-width="18"/>
+<line x1="1702" y1="960" x2="-60" y2="61" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="1316" y1="-60" x2="-60" y2="976" stroke="#0a0a0a" stroke-width="16"/>
+<line x1="865" y1="960" x2="-60" y2="600" stroke="url(#wh)" stroke-width="14"/>
+<line x1="1437" y1="960" x2="200" y2="960" stroke="#0a0a0a" stroke-width="40"/>
+<line x1="-60" y1="704" x2="1380" y2="-60" stroke="url(#wh)" stroke-width="24"/>
+<line x1="-60" y1="951" x2="-60" y2="-11" stroke="#0a0a0a" stroke-width="16"/>
+<line x1="740" y1="960" x2="-60" y2="125" stroke="#0a0a0a" stroke-width="52"/>
+<line x1="759" y1="-60" x2="-60" y2="780" stroke="url(#wh)" stroke-width="10"/>
+<line x1="1620" y1="-60" x2="756" y2="960" stroke="#0a0a0a" stroke-width="22"/>
+<line x1="1660" y1="768" x2="-60" y2="-5" stroke="url(#wh)" stroke-width="24"/>
+<line x1="1786" y1="960" x2="102" y2="-60" stroke="#0a0a0a" stroke-width="40"/>
+</g>
+</svg>

@@ -4,16 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EXTREME CLEAN Exterior Services — Lake Havasu City, AZ</title>
-  <meta name="description" content="Lake Havasu's one-call crew for landscaping, pressure washing, window cleaning, palm tree trimming, and more. Free estimates quoted within 24 hours." />
+  <meta name="description" content="Locally veteran-owned exterior crew in Lake Havasu City — wash services, landscaping, and junk removal. Pressure washing, window and solar cleaning, weed removal, tree trimming, hauling, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=13" />
+  <link rel="stylesheet" href="assets/styles.css?v=25" />
 </head>
 <body>
 
+  <!-- ============ ICONS (inline sprite) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20c-1-9 5-15 15-15 0 10-6 16-15 15z"/><path d="M5 20 14 11"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/><path d="M10 11v6M14 11v6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6.1.6-4.6 4.1 1.3 6L12 16.3l-5.4 3 1.3-6-4.6-4.1 6.1-.6z"/></symbol>
+    </defs>
+  </svg>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
+    <!-- Top bar: slogan (left) + EST (right), both taken from the client's logo -->
+    <div class="header-top stripes">
+      <span class="header-slogan">&ldquo;Quality You Can See&rdquo;</span>
+      <span class="header-est">EST. 2025</span>
+    </div>
     <div class="header-main">
       <nav class="nav-left">
         <a href="#services">Services</a>
@@ -22,13 +42,14 @@
       </nav>
 
       <a href="#top" class="brand-center">
-        Extreme Clean<small>Exterior Services</small>
+        <img src="assets/logo-sm.webp" alt="Extreme Clean Exterior Services logo" class="brand-logo" width="52" height="52" />
+        <span class="brand-text">Extreme Clean<small>Exterior Services</small></span>
       </a>
 
       <nav class="nav-right">
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
-        <a href="tel:9286669274" class="phone-link">(928) 666-9274</a>
+        <a href="tel:9286669274" class="phone-link"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(928) 666-9274</a>
         <a href="#contact" class="btn btn-solid" style="padding:10px 20px;font-size:.7rem;">Get a Quote</a>
       </nav>
 
@@ -38,6 +59,7 @@
         <a href="#services">Services</a>
         <a href="#projects">Our Work</a>
         <a href="#process">Process</a>
+        <a href="#areas">Service Areas</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="tel:9286669274">(928) 666-9274</a>
@@ -47,51 +69,82 @@
   </header>
 
   <!-- ============ HERO ============ -->
+  <!-- Hero background: London Bridge at sunset (client-supplied photo) — see .hero::before in styles.css. Swap for Justin's Lake Havasu video when supplied. -->
   <section class="hero">
     <div class="hero-content">
+      <p class="hero-badge"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Locally Veteran-Owned · Lake Havasu City</p>
       <h1>Luxury Landscaping Starts&nbsp;Here.</h1>
-      <p>Lake Havasu's one-call crew for landscaping, pressure washing, and full exterior care. Free estimate — quoted within 24&nbsp;hours.</p>
+      <p>Lake Havasu's one-call crew for wash services, landscaping, and junk removal. Free estimate — quoted within 24&nbsp;hours.</p>
 
-      <form class="hero-form" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! You\'ll have your quote within 24 hours.');">
-        <input type="text" placeholder="Name" required />
-        <input type="tel" placeholder="Phone" required />
-        <select required>
+      <form class="hero-form lead-form" data-status="hero-status" data-success="Thanks! You'll have your quote within 24 hours.">
+        <input type="hidden" name="_subject" value="New quote request — extremecleaning.online" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="form" value="Hero form" />
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="text" name="name" placeholder="Name" autocomplete="name" required />
+        <input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required />
+        <select name="service" required aria-label="Service needed">
           <option value="" disabled selected>Service needed</option>
-          <option>Landscaping</option>
-          <option>Window Cleaning</option>
-          <option>Solar Panel Cleaning</option>
-          <option>Palm Tree Trimming</option>
-          <option>Hedge Trimming</option>
-          <option>Trashcan Cleaning</option>
-          <option>Pressure Washing</option>
-          <option>Weed Removal</option>
-          <option>Multiple Services</option>
+          <optgroup label="Wash Services">
+            <option>Pressure Washing</option>
+            <option>Window Cleaning</option>
+            <option>Solar Panel Cleaning</option>
+            <option>Trash Can Cleaning</option>
+            <option>Gutter Cleaning</option>
+            <!-- <option>Turf Cleaning</option>  HOLD: not offered until client confirms equipment/availability -->
+          </optgroup>
+          <optgroup label="Landscaping Services">
+            <option>Weed Removal</option>
+            <option>Tree / Stump Removal</option>
+            <option>Cactus Removal</option>
+            <option>Green Waste Removal</option>
+            <option>Tree Trimming</option>
+            <option>Hedge Removal</option>
+            <option>Bush Removal</option>
+          </optgroup>
+          <optgroup label="Junk Removal &amp; Debris">
+            <option>Junk Removal</option>
+            <option>Debris Removal</option>
+            <option>Curbside Pickup</option>
+            <option>Yard Waste Removal</option>
+            <option>Appliance Haul-Off</option>
+            <option>Estate Cleanouts</option>
+            <option>Rental Property Cleanouts</option>
+            <option>Construction Debris Removal</option>
+            <option>Demolition Removal</option>
+            <option>Auto Shop Scrap Removal</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option>Monthly Service</option>
+            <option>Multiple Services</option>
+          </optgroup>
         </select>
         <button type="submit" class="btn btn-solid">Get My Free Estimate</button>
       </form>
-      <p class="hero-micro">Free · No obligation · Response within 24 hours · or call/text <a href="tel:9286669274">(928) 666-9274</a></p>
+      <p class="form-status" id="hero-status" role="status" aria-live="polite"></p>
+      <p class="hero-micro">Free · No obligation · Response within 24 hours · or call <a href="tel:9286669274">(928) 666-9274</a></p>
 
       <div class="hero-trust">
         <span class="stars">★★★★★</span>
         <span>Rated by Havasu homeowners</span>
         <span class="dot">·</span>
-        <span>Licensed &amp; Insured</span>
+        <span>Fully Insured</span>
         <span class="dot">·</span>
-        <span>Locally Owned</span>
+        <span>Locally Veteran-Owned</span>
       </div>
     </div>
   </section>
 
   <!-- ============ REVIEWS SNIPPET ============ -->
-  <section class="section section-dark reviews-snippet" id="reviews">
+  <section class="section section-dark reviews-snippet stripes" id="reviews">
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Reviews</p>
         <h2>What our customers say.</h2>
       </div>
     </div>
-    <div class="reviews-grid">
-      <div class="review-card">
+    <div class="reviews-grid reviews-carousel" aria-roledescription="carousel" aria-label="Customer reviews">
+      <div class="review-card is-active">
         <div class="stars">★★★★★</div>
         <p>"These guys are awesome. Justin and team did an excellent job of clearing out a mass of scorpion bushes/weeds on 3/4 acres. Happy to support a veteran-owned company. 🇺🇸"</p>
         <footer>Red Crawford</footer>
@@ -112,79 +165,152 @@
         <footer>Thecosbybeast</footer>
       </div>
     </div>
+    <div class="rev-nav">
+      <button type="button" class="rev-prev" aria-label="Previous review">&larr;</button>
+      <button type="button" class="rev-next" aria-label="Next review">&rarr;</button>
+    </div>
   </section>
 
-  <!-- ============ SERVICES (merged photo grid) ============ -->
+  <!-- ============ SERVICES (three categories) ============ -->
   <section class="section" id="services">
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">What We Do</p>
         <h2>Every surface. Every season. One&nbsp;crew.</h2>
-        <p>One call covers all eight services — one crew, one invoice, zero chasing contractors.</p>
+        <p>Wash, landscaping, and junk removal — one crew, one invoice, zero chasing contractors.</p>
       </div>
     </div>
-    <div class="svc-grid">
-      <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1769881271035-518ca09997ce?w=600&q=80" alt="Landscaping" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Landscaping</h3>
-          <p>Desert-scape design &amp; maintenance built for the Havasu heat.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="assets/window.jpg" alt="Window Cleaning" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Window Cleaning</h3>
-          <p>Streak-free glass — hard-water stains gone for good.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=600&q=80" alt="Solar Panel Cleaning" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Solar Panel Cleaning</h3>
-          <p>Dirty panels lose up to 25% output. We get it back.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1712932035236-78a0d36c2c65?w=600&q=80" alt="Palm Tree Trimming" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Palm Tree Trimming</h3>
-          <p>Healthy, fire-safe, resort-ready palms year-round.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="assets/hedge.jpg" alt="Hedge Trimming" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Hedge Trimming</h3>
-          <p>Clean lines and shaped hedges that keep your curb appeal sharp.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="assets/trashcan2.jpg" alt="Trashcan Cleaning" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Trashcan Cleaning</h3>
-          <p>Sanitized, deodorized, pest-free bins. No more trash-day dread.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?w=600&q=80" alt="Pressure Washing" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Pressure Washing</h3>
-          <p>Driveways, patios &amp; pool decks blasted back to like-new.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card">
-        <img src="assets/weed-removal.jpg" alt="Weed Removal" loading="lazy" />
-        <div class="svc-copy">
-          <h3>Weed Removal</h3>
-          <p>Invasive weeds cleared from rock, gravel &amp; desert landscapes.</p>
-        </div>
-      </a>
+
+    <!-- Wash Services -->
+    <div class="svc-cat" id="wash-services">
+      <div class="svc-cat-head">
+        <svg class="ico ico-lg" aria-hidden="true"><use href="#i-drop"/></svg>
+        <h3>Wash Services</h3>
+        <ul class="svc-list">
+          <li>Pressure Washing</li>
+          <li>Window Cleaning</li>
+          <li>Solar Panel Cleaning</li>
+          <li>Trash Can Cleaning</li>
+          <li>Gutter Cleaning</li>
+          <!-- <li>Turf Cleaning</li>  HOLD: awaiting client confirmation -->
+        </ul>
+      </div>
+      <div class="svc-grid">
+        <a href="#contact" class="svc-card">
+          <img src="assets/pressure.jpg" alt="Crew member pressure washing a paver walkway" loading="lazy" style="object-position:center 55%;" />
+          <div class="svc-copy">
+            <h3>Pressure Washing</h3>
+            <p>Driveways, patios &amp; pool decks blasted back to like-new.</p>
+          </div>
+        </a>
+        <a href="#contact" class="svc-card">
+          <img src="assets/window.jpg" alt="Window Cleaning" loading="lazy" />
+          <div class="svc-copy">
+            <h3>Window Cleaning</h3>
+            <p>Streak-free glass — hard-water stains gone for good.</p>
+          </div>
+        </a>
+        <a href="#contact" class="svc-card">
+          <!-- STOCK PHOTO — replace with a genuine client solar job photo -->
+          <img src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=600&q=80" alt="Solar Panel Cleaning" loading="lazy" />
+          <div class="svc-copy">
+            <h3>Solar Panel Cleaning</h3>
+            <p>Dirty panels lose up to 25% output. We get it back.</p>
+          </div>
+        </a>
+        <a href="#contact" class="svc-card">
+          <!-- Before/after: needs a DIRTY trash can photo for the left side -->
+          <div class="ba">
+            <div class="ba-side ba-pending"><span class="ba-tag">Dirty</span><span class="ba-note">Client photo pending</span></div>
+            <div class="ba-side"><img src="assets/trashcan2.jpg" alt="Freshly cleaned trash cans" loading="lazy" /><span class="ba-tag">Clean</span></div>
+          </div>
+          <div class="svc-copy">
+            <h3>Trash Can Cleaning</h3>
+            <p>Sanitized, deodorized, pest-free bins. No more trash-day dread.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Landscaping Services -->
+    <div class="svc-cat" id="landscaping-services">
+      <div class="svc-cat-head">
+        <svg class="ico ico-lg" aria-hidden="true"><use href="#i-leaf"/></svg>
+        <h3>Landscaping Services</h3>
+        <ul class="svc-list">
+          <li>Weed Removal</li>
+          <li>Tree / Stump Removal</li>
+          <li>Cactus Removal</li>
+          <li>Green Waste Removal</li>
+          <li>Tree Trimming</li>
+          <li>Hedge Removal</li>
+          <li>Bush Removal</li>
+        </ul>
+      </div>
+      <div class="svc-grid">
+        <a href="#contact" class="svc-card">
+          <!-- Before/after: needs a BEFORE (weedy) photo for the left side -->
+          <div class="ba">
+            <div class="ba-side ba-pending"><span class="ba-tag">Before</span><span class="ba-note">Client photo pending</span></div>
+            <div class="ba-side"><img src="assets/weed-removal.jpg" alt="Gravel yard after weed removal" loading="lazy" /><span class="ba-tag">After</span></div>
+          </div>
+          <div class="svc-copy">
+            <h3>Weed Removal</h3>
+            <p>Invasive weeds cleared from rock, gravel &amp; desert landscapes.</p>
+          </div>
+        </a>
+        <a href="#contact" class="svc-card">
+          <img src="assets/palmtree.jpg" alt="Freshly trimmed palm tree" loading="lazy" style="object-position:center 70%;" />
+          <div class="svc-copy">
+            <h3>Tree Trimming</h3>
+            <p>Healthy, fire-safe trees and palms that look sharp year-round.</p>
+          </div>
+        </a>
+        <a href="#contact" class="svc-card">
+          <!-- Needs new photos of the larger hedges (old hedge.jpg was a duplicate of the weed photo) -->
+          <div class="svc-ph"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg><span>Client photo pending</span></div>
+          <div class="svc-copy">
+            <h3>Hedge Removal</h3>
+            <p>Overgrown hedges cut out and hauled away.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Junk Removal & Debris Services -->
+    <div class="svc-cat" id="junk-services">
+      <div class="svc-cat-head">
+        <svg class="ico ico-lg" aria-hidden="true"><use href="#i-trash"/></svg>
+        <h3>Junk Removal &amp; Debris Services</h3>
+        <ul class="svc-list">
+          <li>Junk Removal</li>
+          <li>Debris Removal</li>
+          <li>Curbside Pickup</li>
+          <li>Yard Waste Removal</li>
+          <li>Green Waste Removal</li>
+          <li>Appliance Haul-Off</li>
+          <li>Estate Cleanouts</li>
+          <li>Rental Property Cleanouts</li>
+          <li>Construction Debris Removal</li>
+          <li>Demolition Removal</li>
+          <li>Auto Shop Scrap Removal</li>
+        </ul>
+      </div>
+      <div class="svc-grid">
+        <a href="#contact" class="svc-card">
+          <!-- Needs photo of debris/materials loaded in the company trailer -->
+          <div class="svc-ph"><svg class="ico" aria-hidden="true"><use href="#i-trash"/></svg><span>Client photo pending</span></div>
+          <div class="svc-copy">
+            <h3>Junk Removal</h3>
+            <p>Junk and debris loaded up and hauled off in our trailer.</p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ============ CTA 1 ============ -->
-  <section class="cta-band">
+  <section class="cta-band stripes">
     <h2>Your neighbors will ask: "Who did your yard?"</h2>
     <p>Most homeowners don't realize how much a clean exterior transforms their property — until they see the before and after.</p>
     <a href="#contact" class="btn btn-solid btn-lg">Get My Free Estimate</a>
@@ -200,22 +326,10 @@
         <p>A few of the properties we've transformed this year across Lake Havasu City.</p>
       </div>
     </div>
-    <div class="gallery-grid" style="padding:0 40px;max-width:1320px;margin:0 auto;">
+    <div class="gallery-grid gallery-4" style="padding:0 40px;max-width:1320px;margin:0 auto;">
       <div class="gallery-item">
         <img src="assets/landscaping-gallery.jpg" alt="Landscaping" loading="lazy" style="object-position:center 30%;" />
         <div class="label">Landscaping</div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1783211645463-72e7cc607d3e?w=600&q=80" alt="Resort-style patio" loading="lazy" />
-        <div class="label">Full Exterior Clean</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/patio.jpg" alt="Patio hardscape" loading="lazy" />
-        <div class="label">Patio &amp; Hardscaping</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/pressure.jpg" alt="Driveway pressure wash" loading="lazy" />
-        <div class="label">Pressure Wash</div>
       </div>
       <div class="gallery-item">
         <img src="assets/window-gallery.jpg" alt="Window cleaning" loading="lazy" />
@@ -226,16 +340,8 @@
         <div class="label">Front Yard Renovation</div>
       </div>
       <div class="gallery-item">
-        <img src="assets/solar-gallery.jpg" alt="Solar panel cleaning" loading="lazy" />
+        <img src="assets/solar-gallery.jpg" alt="Solar panel cleaning before and after" loading="lazy" />
         <div class="label">Solar Panel Service</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/palmtree.jpg" alt="Palm tree trimming" loading="lazy" />
-        <div class="label">Palm Tree Trimming</div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1499814375754-a481db8ab6c5?w=600&q=80" alt="Aerial luxury desert estate" loading="lazy" />
-        <div class="label">Complete Property Makeover</div>
       </div>
     </div>
   </section>
@@ -269,7 +375,7 @@
   </section>
 
   <!-- ============ CTA 2 ============ -->
-  <section class="cta-band">
+  <section class="cta-band stripes">
     <h2>Get a free walk-through this&nbsp;week.</h2>
     <p>Book a free walk-through and we'll show you exactly what's possible — with a clear plan and an honest price.</p>
     <a href="#contact" class="btn btn-solid btn-lg">Book My Free Walk-Through</a>
@@ -292,16 +398,66 @@
           <p class="eyebrow">Why Havasu Chooses Us</p>
           <h2>A crew that treats your property like our&nbsp;own.</h2>
           <p>EXTREME CLEAN Exterior Services started with a simple idea: Lake Havasu homeowners deserve one team they can trust for everything outside their front door.</p>
-          <p>We're locally owned, fully insured, and obsessed with results. Whether it's a landscape build, a pressure wash, or a solar panel cleaning — we show up on time, do the job right, and don't leave until you're happy.</p>
+          <p>We're locally veteran-owned, fully insured, and obsessed with results. Whether it's a weed clear-out, a pressure wash, or a junk haul-off — we show up on time, do the job right, and don't leave until you're happy.</p>
           <ul class="checklist">
             <li>Free, no-pressure estimates</li>
-            <li>Locally owned &amp; operated in Havasu</li>
-            <li>Licensed &amp; fully insured</li>
+            <li>Locally veteran-owned &amp; operated in Havasu</li>
+            <li>Fully insured</li>
             <li>100% satisfaction guarantee</li>
             <li>Same reliable crew every visit</li>
           </ul>
           <a href="#contact" class="btn btn-solid">Get My Free Estimate</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OWNERS (template — enable once Justin & Jaden send bios + joint photo) ============
+  <section class="section" id="owners">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img"><img src="assets/owners.jpg" alt="Justin and Jaden, owners of Extreme Clean Exterior Services" /></div>
+        <div class="about-copy">
+          <p class="eyebrow">Meet the Owners · Locally Veteran-Owned</p>
+          <h2>Justin &amp; Jaden.</h2>
+          <h3 class="owner-name">Justin</h3>
+          <p>[Justin's bio — use client-supplied text only]</p>
+          <h3 class="owner-name">Jaden</h3>
+          <p>[Jaden's bio — use client-supplied text only]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ============ SERVICE AREAS ============ -->
+  <section class="section" id="areas">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Service Areas</p>
+        <h2>Where we work.</h2>
+        <p>Based in Lake Havasu City and serving the surrounding communities.</p>
+      </div>
+      <div class="areas">
+        <div class="areas-block">
+          <h3><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Home base</h3>
+          <ul class="area-chips area-primary">
+            <li>Lake Havasu City</li>
+          </ul>
+        </div>
+        <div class="areas-block areas-more">
+          <h3>Also serving</h3>
+          <ul class="area-chips">
+            <li>Parker</li>
+            <li>Bullhead City</li>
+            <li>Kingman</li>
+            <li>Golden Valley</li>
+            <li>Topock</li>
+            <li>Fort Mohave</li>
+            <li class="area-etc">&amp; surrounding areas</li>
+          </ul>
+        </div>
+        <p class="areas-note">Not sure if we cover your area? Call <a href="tel:9286669274">(928) 666-9274</a> and ask.</p>
       </div>
     </div>
   </section>
@@ -315,20 +471,24 @@
       </div>
       <div class="faq-list">
         <details>
+          <summary>How quickly can I get a quote?</summary>
+          <p>Fast — we can usually get you a quote the same day.</p>
+        </details>
+        <details>
+          <summary>How long does a project take?</summary>
+          <p>It depends on the service and the size of the job. Projects can take anywhere from one day to one week.</p>
+        </details>
+        <details>
           <summary>How much does it cost?</summary>
           <p>Every quote is free and itemized — you see exactly what each service costs before we start, and the price is locked before any work begins. No surprises, ever.</p>
         </details>
         <details>
-          <summary>How fast can you get to me?</summary>
-          <p>You'll have your quote within 24 hours, and most jobs are scheduled within the week. Many projects are done in a single day.</p>
-        </details>
-        <details>
-          <summary>Are you licensed and insured?</summary>
-          <p>Yes — fully licensed and insured. We're happy to provide proof of insurance before any work begins.</p>
+          <summary>Are you insured?</summary>
+          <p>Yes — we're fully insured.</p>
         </details>
         <details>
           <summary>Do I need to be home?</summary>
-          <p>Nope. Most exterior work is done while you're away — we'll send photo updates and walk you through the results when the job's done.</p>
+          <p>No — as long as you send us pictures of what needs to be done, you don't need to be home.</p>
         </details>
         <details>
           <summary>Do you handle HOA requirements?</summary>
@@ -346,31 +506,60 @@
           <h2>Get your free&nbsp;estimate.</h2>
           <p>Tell us about your project and we'll put together a free, no-pressure estimate. Most quotes returned within 24 hours.</p>
           <ul class="contact-list">
-            <li>📞 <a href="tel:9286669274">(928) 666-9274</a></li>
-            <li>✉️ <a href="mailto:info@extremecleanaz.com">info@extremecleanaz.com</a></li>
-            <li>📍 Serving Lake Havasu City &amp; surrounding areas</li>
-            <li>🕑 Mon – Sat · 6am – 6pm</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:9286669274">(928) 666-9274</a><small class="call-only">Calls answered 24/7 · call only — no texts</small></span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span>Work hours: Monday–Friday<small>4:00 AM – 6:00 PM</small></span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:extremecleanextservices@gmail.com">extremecleanextservices@gmail.com</a></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><a href="#areas">Serving Lake Havasu City &amp; surrounding areas</a></li>
           </ul>
         </div>
-        <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); alert('Got it — you\'ll hear from us within 24 hours.');">
+        <form class="contact-form lead-form" data-status="contact-status" data-success="Got it — you'll hear from us within 24 hours.">
+          <input type="hidden" name="_subject" value="New quote request — extremecleaning.online" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="form" value="Contact form" />
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <h3>Tell us about your project — quote within 24&nbsp;hours</h3>
-          <p class="form-incentive">Mention this website for $25 off your first service.</p>
-          <input type="text" placeholder="Name" required />
-          <input type="tel" placeholder="Phone number" required />
-          <select required>
+          <p class="prefill-note" id="prefill-note" role="status" aria-live="polite" hidden></p>
+          <input type="text" name="name" placeholder="Name" autocomplete="name" required />
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required />
+          <select name="service" required aria-label="Service needed">
             <option value="" disabled selected>Service needed</option>
-            <option>Landscaping</option>
-            <option>Window Cleaning</option>
-            <option>Solar Panel Cleaning</option>
-            <option>Palm Tree Trimming</option>
-            <option>Hedge Trimming</option>
-            <option>Trashcan Cleaning</option>
-            <option>Pressure Washing</option>
-            <option>Weed Removal</option>
-            <option>Multiple Services</option>
+            <optgroup label="Wash Services">
+              <option>Pressure Washing</option>
+              <option>Window Cleaning</option>
+              <option>Solar Panel Cleaning</option>
+              <option>Trash Can Cleaning</option>
+              <option>Gutter Cleaning</option>
+              <!-- <option>Turf Cleaning</option>  HOLD: not offered until client confirms equipment/availability -->
+            </optgroup>
+            <optgroup label="Landscaping Services">
+              <option>Weed Removal</option>
+              <option>Tree / Stump Removal</option>
+              <option>Cactus Removal</option>
+              <option>Green Waste Removal</option>
+              <option>Tree Trimming</option>
+              <option>Hedge Removal</option>
+              <option>Bush Removal</option>
+            </optgroup>
+            <optgroup label="Junk Removal &amp; Debris">
+              <option>Junk Removal</option>
+              <option>Debris Removal</option>
+              <option>Curbside Pickup</option>
+              <option>Yard Waste Removal</option>
+              <option>Appliance Haul-Off</option>
+              <option>Estate Cleanouts</option>
+              <option>Rental Property Cleanouts</option>
+              <option>Construction Debris Removal</option>
+              <option>Demolition Removal</option>
+              <option>Auto Shop Scrap Removal</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>Monthly Service</option>
+              <option>Multiple Services</option>
+            </optgroup>
           </select>
-          <textarea rows="3" placeholder="Anything else we should know? (optional)"></textarea>
+          <textarea name="details" rows="3" placeholder="Anything else we should know? (optional)"></textarea>
           <button type="submit" class="btn btn-filled btn-block btn-lg">Get My Free Estimate</button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
           <p class="form-micro">Free · No obligation · Response within 24 hours</p>
         </form>
       </div>
@@ -379,27 +568,49 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="footer-grid">
+    <p class="footer-hint">Tap any service below to open our free quote request form — we'll fill in that service for you.</p>
+    <div class="footer-grid footer-grid-5">
       <div class="footer-about">
+        <img src="assets/logo.webp" alt="Extreme Clean Exterior Services — Quality You Can See — Est. 2025" class="footer-logo" width="180" height="180" loading="lazy" />
         <div class="brand-name">Extreme Clean</div>
-        <p>Lake Havasu City's trusted team for landscaping, cleaning, and exterior maintenance. One crew, one call — every surface covered.</p>
+        <p>Lake Havasu City's locally veteran-owned team for wash services, landscaping, and junk removal. One crew, one call.</p>
+        <!-- Social links: add Facebook + Instagram here once the client confirms the exact page URLs -->
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Wash</h4>
         <ul>
-          <li><a href="#services">Landscaping</a></li>
-          <li><a href="#services">Window Cleaning</a></li>
-          <li><a href="#services">Solar Panel Cleaning</a></li>
-          <li><a href="#services">Palm Tree Trimming</a></li>
+          <li><a href="#contact" data-service="Pressure Washing">Pressure Washing</a></li>
+          <li><a href="#contact" data-service="Window Cleaning">Window Cleaning</a></li>
+          <li><a href="#contact" data-service="Solar Panel Cleaning">Solar Panel Cleaning</a></li>
+          <li><a href="#contact" data-service="Trash Can Cleaning">Trash Can Cleaning</a></li>
+          <li><a href="#contact" data-service="Gutter Cleaning">Gutter Cleaning</a></li>
+          <li><a href="#contact" data-service="Monthly Service">Monthly Service</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>More Services</h4>
+        <h4>Landscaping</h4>
         <ul>
-          <li><a href="#services">Hedge Trimming</a></li>
-          <li><a href="#services">Trashcan Cleaning</a></li>
-          <li><a href="#services">Pressure Washing</a></li>
-          <li><a href="#services">Weed Removal</a></li>
+          <li><a href="#contact" data-service="Weed Removal">Weed Removal</a></li>
+          <li><a href="#contact" data-service="Tree / Stump Removal">Tree / Stump Removal</a></li>
+          <li><a href="#contact" data-service="Cactus Removal">Cactus Removal</a></li>
+          <li><a href="#contact" data-service="Tree Trimming">Tree Trimming</a></li>
+          <li><a href="#contact" data-service="Hedge Removal">Hedge Removal</a></li>
+          <li><a href="#contact" data-service="Bush Removal">Bush Removal</a></li>
+          <li><a href="#contact" data-service="Green Waste Removal">Green Waste Removal</a></li>
+          <li><a href="#contact" data-service="Monthly Service">Monthly Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Junk Removal</h4>
+        <ul>
+          <li><a href="#contact" data-service="Junk Removal">Junk Removal</a></li>
+          <li><a href="#contact" data-service="Debris Removal">Debris Removal</a></li>
+          <li><a href="#contact" data-service="Curbside Pickup">Curbside Pickup</a></li>
+          <li><a href="#contact" data-service="Appliance Haul-Off">Appliance Haul-Off</a></li>
+          <li><a href="#contact" data-service="Estate Cleanouts">Estate Cleanouts</a></li>
+          <li><a href="#contact" data-service="Rental Property Cleanouts">Rental Property Cleanouts</a></li>
+          <li><a href="#contact" data-service="Construction Debris Removal">Construction Debris Removal</a></li>
+          <li><a href="#contact" data-service="Demolition Removal">Demolition Removal</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -407,24 +618,107 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Our Work</a></li>
+          <li><a href="#areas">Service Areas</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
+    <p class="call-only-note"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Please note: <a href="tel:9286669274">(928) 666-9274</a> is a call-only line and does not receive text messages.</p>
     <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> Extreme Clean Exterior Services · Licensed &amp; Insured</span>
+      <span>&copy; <span id="year"></span> Extreme Clean Exterior Services · Fully Insured · Locally Veteran-Owned</span>
       <span>Lake Havasu City, AZ</span>
     </div>
   </footer>
 
   <!-- ============ STICKY MOBILE BAR ============ -->
   <div class="sticky-bar">
-    <a href="tel:9286669274" class="sticky-call">📞 Call / Text</a>
+    <a href="tel:9286669274" class="sticky-call"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
     <a href="#contact" class="sticky-quote">Free Estimate</a>
   </div>
 
   <script>
+    // Quote forms -> email via FormSubmit (free, no account). The first submission sends an
+    // "Activate Form" email to this inbox; nothing is delivered until someone clicks it.
+    var FORM_ENDPOINT = 'https://formsubmit.co/ajax/extremecleanextservices@gmail.com';
+    document.querySelectorAll('form.lead-form').forEach(function (form) {
+      var status = document.getElementById(form.dataset.status);
+      var btn = form.querySelector('[type=submit]');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form._honey && form._honey.value) return; // bot
+        var label = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        status.className = 'form-status';
+        status.textContent = '';
+        fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'Send failed');
+            form.reset();
+            status.className = 'form-status ok';
+            status.textContent = form.dataset.success;
+          })
+          .catch(function (err) {
+            console.error('Quote form error:', err);
+            status.className = 'form-status err';
+            status.innerHTML = 'Sorry — that didn\'t go through. Please call <a href="tel:9286669274">(928) 666-9274</a>.';
+          })
+          .finally(function () { btn.disabled = false; btn.textContent = label; });
+      });
+    });
+
+    // Reviews: one at a time, auto-advancing every 6s, pauses on hover/focus.
+    (function () {
+      var box = document.querySelector('.reviews-carousel');
+      var cards = box.querySelectorAll('.review-card');
+      var i = 0, timer;
+      function show(n) {
+        cards[i].classList.remove('is-active');
+        i = (n + cards.length) % cards.length;
+        cards[i].classList.add('is-active');
+      }
+      function start() { stop(); timer = setInterval(function () { show(i + 1); }, 6000); }
+      function stop() { clearInterval(timer); }
+      document.querySelector('.rev-next').addEventListener('click', function () { show(i + 1); start(); });
+      document.querySelector('.rev-prev').addEventListener('click', function () { show(i - 1); start(); });
+      var section = document.getElementById('reviews');
+      section.addEventListener('mouseenter', stop);
+      section.addEventListener('mouseleave', start);
+      section.addEventListener('focusin', stop);
+      section.addEventListener('focusout', start);
+      start();
+    })();
+
+    // Service links (footer list + service tiles) open the quote form with that service pre-selected.
+    (function () {
+      var form = document.querySelector('.contact-form');
+      var select = form.querySelector('select[name=service]');
+      var note = document.getElementById('prefill-note');
+      function pick(name) {
+        var match = [].some.call(select.options, function (o) { return o.text === name; });
+        if (!match) return;
+        select.value = name;
+        select.classList.add('prefilled');
+        note.hidden = false;
+        note.textContent = 'You picked ' + name + '. Just add your name and phone number and send it over.';
+        setTimeout(function () { form.querySelector('input[name=name]').focus({ preventScroll: true }); }, 600);
+      }
+      document.querySelectorAll('a[data-service]').forEach(function (a) {
+        a.addEventListener('click', function () { pick(a.dataset.service); });
+      });
+      document.querySelectorAll('a.svc-card').forEach(function (a) {
+        a.addEventListener('click', function () { pick(a.querySelector('h3').textContent.trim()); });
+      });
+      select.addEventListener('change', function () { note.hidden = true; select.classList.remove('prefilled'); });
+      form.addEventListener('reset', function () { note.hidden = true; select.classList.remove('prefilled'); });
+    })();
+
     document.getElementById('year').textContent = new Date().getFullYear();
     document.querySelector('.nav-toggle').addEventListener('click', function () {
       document.querySelector('.nav-links').classList.toggle('open');
