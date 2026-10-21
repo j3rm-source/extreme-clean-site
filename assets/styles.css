@@ -785,7 +785,7 @@ a { color: inherit; text-decoration: none; }
     text-transform: uppercase;
     color: rgba(255,255,255,.7);
   }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: flex; }
   .brand-center { position: static; transform: none; }
 }
 
@@ -1498,3 +1498,33 @@ button[disabled] { opacity: .6; cursor: wait; }
   .lightbox { padding-bottom: 80px; }
   .lightbox img { max-height: calc(100vh - 190px); }
 }
+
+/* ============ v27: MOBILE / LEGIBILITY POLISH ============ */
+/* Phone numbers never break mid-number */
+a[href^="tel:"] { white-space: nowrap; }
+
+/* Hero fine print sits on a busy photo — lift it off the background */
+.hero-micro { color: rgba(255,255,255,.85) !important; text-shadow: 0 1px 3px rgba(0,0,0,.9); }
+.hero-trust { color: rgba(255,255,255,.9); text-shadow: 0 1px 3px rgba(0,0,0,.9); }
+
+/* Menu button: full 44px tap target */
+.nav-toggle {
+  width: 44px; height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-right: -10px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .ba-tag { font-size: .6rem; }
+  .header-top { font-size: .62rem; }
+  .brand-center small { font-size: .6rem; }
+  /* Footer links: taller tap targets on phones */
+  .footer-col li { margin-bottom: 2px; }
+  .footer-col a { display: inline-block; padding: 7px 0; }
+  .nav-links a { padding: 6px 0; }
+}
+/* Slightly darker hero photo so the form + fine print read clearly */
+.hero::before { opacity: .42; }
+.hero-micro { font-size: .74rem !important; }

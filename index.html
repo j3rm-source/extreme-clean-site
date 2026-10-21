@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=26" />
+  <link rel="stylesheet" href="assets/styles.css?v=27" />
 </head>
 <body>
 
@@ -820,14 +820,21 @@
     })();
 
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelector('.nav-toggle').addEventListener('click', function () {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-    document.querySelectorAll('.nav-links a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        document.querySelector('.nav-links').classList.remove('open');
+    // Mobile menu: icon flips to ✕ while open.
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      function set(open) {
+        links.classList.toggle('open', open);
+        toggle.textContent = open ? '✕' : '☰';
+        toggle.setAttribute('aria-expanded', open);
+      }
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.addEventListener('click', function () { set(!links.classList.contains('open')); });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { set(false); });
       });
-    });
+    })();
   </script>
 </body>
 </html>
