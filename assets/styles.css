@@ -1426,3 +1426,75 @@ button[disabled] { opacity: .6; cursor: wait; }
 .call-only-note { font-size: 1.05rem; margin-bottom: 32px; }
 .call-only-note .ico { width: 20px; height: 20px; }
 @media (max-width: 768px) { .call-only-note { font-size: .98rem; } }
+
+/* ============ v26: OUR WORK GALLERY + LIGHTBOX ============ */
+.gallery-work {
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 40px;
+}
+.gallery-work .gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--bg-card);
+  font: inherit;
+  text-align: left;
+}
+.gallery-work .gallery-item:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.gallery-work .gallery-item .label {
+  font-family: var(--ff-mono);
+  font-size: .64rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) { .gallery-work { grid-template-columns: repeat(3, 1fr); padding: 0 24px; } }
+@media (max-width: 768px)  { .gallery-work { grid-template-columns: repeat(2, 1fr); } }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 56px 16px 24px;
+  background: rgba(0,0,0,.92);
+}
+.lightbox[hidden] { display: none; }
+.lightbox figure { margin: 0; max-width: min(1100px, 100%); text-align: center; }
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 140px);
+  margin: 0 auto;
+  object-fit: contain;
+}
+.lightbox figcaption {
+  margin-top: 12px;
+  font-family: var(--ff-mono);
+  font-size: .7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+}
+.lightbox button {
+  flex: none;
+  width: 44px; height: 44px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.lightbox button:hover { border-color: var(--accent); background: var(--accent); }
+.lightbox .lb-close { position: absolute; top: 12px; right: 16px; font-size: 1.6rem; line-height: 1; }
+@media (max-width: 768px) {
+  .lightbox .lb-prev, .lightbox .lb-next { position: absolute; bottom: 16px; }
+  .lightbox .lb-prev { left: calc(50% - 56px); }
+  .lightbox .lb-next { right: calc(50% - 56px); }
+  .lightbox { padding-bottom: 80px; }
+  .lightbox img { max-height: calc(100vh - 190px); }
+}
